@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Rock Paper Scissor</title>
+
+    </head>
+
+
+    <body>
+
+        <p>Rock Paper Scissor</p>
+
+        <button onclick="
+            let rand_num=Math.floor(Math.random()*3)
+
+            console.log(rand_num);
+            if(rand_num===0){
+                    alert('You choose Rock.Computer choose Rock n game get tie...!');
+                }
+                else if(rand_num===1){
+                    alert('You choose Rock.Computer choose Paper n u loose..!');
+                }
+                else{
+                    alert('You choose Rock.Computer choose Scissor n u win...!');
+            }">Rock</button>
+
+        
+            <button onclick="
+                rand_num=Math.floor(Math.random()*3)
+                console.log(rand_num);
+                if(rand_num===0){
+                    alert('You choose Paper.Computer choose Rock n u win...!');
+                }
+                else if(rand_num===1){
+                    alert('You choose Paper.Computer choose Paper n game tie..!');
+                }
+                else{
+                    alert('You choose Paper.Computer choose Scissor n u loose...!');
+         }">Paper</button>
+
+
+
+        <button onclick="
+                rand_num=Math.floor(Math.random()*3)
+                console.log(rand_num);
+                if(rand_num===0){
+                    alert('You choose Scissor.Computer choose Rock n u loose...!');
+                }
+                else if(rand_num===1){
+                    alert('You choose Scissor.Computer choose Paper n u win..!');
+                }
+                else{
+                    alert('You choose Scissor.Computer choose Scissor n game get tie...!');
+         }">Scissor</button>
+
+
+
+
+        <script>
+           
+
+        </script>
+
+    </body>
+
+
+</html>

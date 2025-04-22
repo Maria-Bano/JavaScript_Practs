@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+</head>
+<body>
+
+    <p>Rock Paper Scissor</p>
+
+    <button onclick="rand_number('Rock')">Rock</button>
+    <button onclick="rand_number('Paper')">Paper</button>
+    <button onclick="rand_number('Scissor')">Scissor</button>
+
+    <script>
+        function rand_number(playerChoice) {
+            const choices = ['Rock', 'Paper', 'Scissor'];
+            const rand_num = Math.floor(Math.random() * 3);
+            const computerChoice = choices[rand_num];
+
+            console.log(`Computer chose: ${computerChoice}`);
+
+            if (computerChoice === playerChoice) {
+                alert(`You chose ${playerChoice}. Computer chose ${computerChoice}. It's a tie!`);
+            } else if (
+                (playerChoice === 'Rock' && computerChoice === 'Paper') ||
+                (playerChoice === 'Paper' && computerChoice === 'Scissor') ||
+                (playerChoice === 'Scissor' && computerChoice === 'Rock')
+            ) {
+                alert(`You chose ${playerChoice}. Computer chose ${computerChoice}. You lose!`);
+            } else {
+                alert(`You chose ${playerChoice}. Computer chose ${computerChoice}. You win!`);
+            }
+        }
+    </script>
+
+</body>
+</html>
