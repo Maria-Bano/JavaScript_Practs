@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+
+    <style>
+
+     #delete{
+      background-color: rgb(233, 12, 12);
+     }
+
+    </style>
+     
+  </head>
+  <body>
+
+    <p>Todo List Practise 1</p>
+    <input id="inputFeild" type="text">
+    <button onclick="add_input();" >Add</button>
+    <p id="data" >Loading...</p>
+    <button onclick="deleteData()"  id="delete";>Delete</button>
+
+    
+
+
+    <script>
+
+      const data=[];
+
+
+      function add_input(){
+        const inputElemnt=document.getElementById('inputFeild');
+        const inputdata=inputElemnt.value;
+        data.push(inputdata);
+        document.getElementById('data').innerHTML=data.join('<br>');
+        inputElemnt.value=''; // clear aftr addup
+
+      }
+      
+
+      function deleteData(){
+        data.splice(0,1);
+        document.getElementById('data').innerHTML = data.join('<br>');
+      }
+
+
+     
+
+
+
+    </script>
+
+
+  </body>
+</html>
